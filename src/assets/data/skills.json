@@ -1,0 +1,42 @@
+[
+    {
+        "skill":"JavaScript",
+        "logo":"2048px-Unofficial_JavaScript_logo_2.svg.png",
+        "colour":"#F0DB4F"
+    },
+    {
+        "skill":"Python",
+        "logo":"110px-Python-logo-notext.svg.png",
+        "colour":"#FFD43B"
+    },
+    {
+        "skill":"Visual Basic",
+        "colour":"rgb(55, 32, 186)"
+    },
+    {
+        "skill":"TypeScript",
+        "logo":"Typescript_logo_2020.png",
+        "colour":"#007acc"
+    },
+    {
+        "skill":"VueJS",
+        "logo":"vue.png",
+        "colour":"#41B883"
+    },
+    {
+        "skill":"TailwindCSS",
+        "logo":"Tailwind_CSS_Logo.png",
+        "colour":"rgb(56, 189, 248)"
+    },
+    {
+        "skill":"HTML",
+        "logo":"HTML5_Badge_512.png",
+        "colour":"#e34c26"
+    },
+    {
+        "skill":"CSS",
+        "logo":"CSS3_logo_and_wordmark.svg.png",
+        "colour":"#264de4"
+    }
+
+]

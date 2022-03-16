@@ -1,0 +1,101 @@
+<template>
+  <div class="home">
+    <div ref="top" id="banner" class="min-h-[30rem] xl:pl-[12%] xl:pr-[12%] pl-4 pr-4 w-full bg-bannercol relative flex justify-between gap-8">
+      <div id="info-container" class="relative mt-8 md:ml-8 ml-0 mb-16 mr-8">
+        <h3 class="before:content-['<'] after:content-['>'] text-lg text-left">div</h3>
+        <div class="sm:ml-4 ml-2">
+          <h2 class="text-2xl text-white mt-12 text-left font-light"><span class="mr-4 animate-wiggle inline-block">👋</span>Hello!</h2>
+          <h1 class="text-5xl text-white mt-6 text-left font-medium">Welcome to my Portfolio!</h1>
+          <h3 class="text-lg text-white mt-8 text-left font-extralight">Frontend Development / Software Development / Programming</h3>
+          <router-link to="#contact" class="left-4 text-white font-normal p-2 pl-4 pr-4 rounded-lg hover:bg-blue-800 duration-100 bg-blue-600 block w-fit mt-8">Get in Touch</router-link>
+        </div>
+        <h3 class="before:content-['<'] after:content-['>'] text-lg text-left mt-12">/div</h3>
+      </div>
+      <div id="banner-logo" class="w-1/2 mt-12 hidden xl:flex relative  items-center justify-end">
+        <svg xmlns="http://www.w3.org/2000/svg" id="banner-logo-svg" viewBox="0 0 295 300" class="relative w-auto mr-12 h-[350px] duration-300" fill="transparent">
+          <path id="logo-banner-path-1" d="M223.5 198C234.3 182.4 275 170.833 294 167V122C278.167 116.833 242.9 100.5 228.5 76.5C214.1 52.5 211.167 16.1667 211.5 1H165.5C165.5 1 165.5 45.5 180 83.5C187.267 102.545 214.667 129.333 228.5 140C221.167 141.667 202.5 150.2 186.5 171C170.5 191.8 159.5 252 156 279.5H201C204 258.833 212.7 213.6 223.5 198Z" class="stroke-headercol duration-700 stroke-8" stroke-width="2"/>
+          <path id="logo-banner-path-2" d="M223.5 198C234.3 182.4 275 170.833 294 167V122C278.167 116.833 242.9 100.5 228.5 76.5C214.1 52.5 211.167 16.1667 211.5 1H165.5C165.5 1 165.5 45.5 180 83.5C187.267 102.545 214.667 129.333 228.5 140C221.167 141.667 202.5 150.2 186.5 171C170.5 191.8 159.5 252 156 279.5H201C204 258.833 212.7 213.6 223.5 198Z" class="stroke-headercol duration-700 stroke-8" stroke-width="2"/>
+          <path id="logo-banner-path-3" d="M223.5 198C234.3 182.4 275 170.833 294 167V122C278.167 116.833 242.9 100.5 228.5 76.5C214.1 52.5 211.167 16.1667 211.5 1H165.5C165.5 1 165.5 45.5 180 83.5C187.267 102.545 214.667 129.333 228.5 140C221.167 141.667 202.5 150.2 186.5 171C170.5 191.8 159.5 252 156 279.5H201C204 258.833 212.7 213.6 223.5 198Z" class="stroke-headercol duration-700 stroke-8" stroke-width="2"/>
+          <path id="logo-banner-path-4" d="M71.5 82.5C60.7 98.1 20 109.667 1 113.5V158.5C16.8333 163.667 52.1 180 66.5 204C80.9 228 83.8333 264.333 83.5 279.5H129.5C129.5 279.5 129.5 235 115 197C107.733 177.955 80.3333 151.167 66.5 140.5C73.8333 138.833 92.5 130.3 108.5 109.5C124.5 88.7 135.5 28.5 139 1H94C91 21.6667 82.3 66.9 71.5 82.5Z" class="stroke-headercol duration-200 stroke-8" stroke-width="2"/>
+          <path id="logo-banner-path-5" d="M71.5 82.5C60.7 98.1 20 109.667 1 113.5V158.5C16.8333 163.667 52.1 180 66.5 204C80.9 228 83.8333 264.333 83.5 279.5H129.5C129.5 279.5 129.5 235 115 197C107.733 177.955 80.3333 151.167 66.5 140.5C73.8333 138.833 92.5 130.3 108.5 109.5C124.5 88.7 135.5 28.5 139 1H94C91 21.6667 82.3 66.9 71.5 82.5Z" class="stroke-headercol duration-200 stroke-8" stroke-width="2"/>
+          <path id="logo-banner-path-6" d="M71.5 82.5C60.7 98.1 20 109.667 1 113.5V158.5C16.8333 163.667 52.1 180 66.5 204C80.9 228 83.8333 264.333 83.5 279.5H129.5C129.5 279.5 129.5 235 115 197C107.733 177.955 80.3333 151.167 66.5 140.5C73.8333 138.833 92.5 130.3 108.5 109.5C124.5 88.7 135.5 28.5 139 1H94C91 21.6667 82.3 66.9 71.5 82.5Z" class="stroke-headercol duration-200 stroke-8" stroke-width="2"/>
+        </svg>
+      </div>
+    </div>
+    <div class="bg-bannercol h-24 z-20 relative" style="clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 0);"> </div>
+    <div class="bg-aboutmebackground h-24 absolute w-full -translate-y-24 z-10" style=""> </div>
+    <span id="aboutme"></span>
+    <div class="bg-aboutmebackground min-h-24 h-auto pt-4 pb-16 w-full relative xl:pl-[12%] xl:pr-[15%] md:pl-12 pl-4 pr-4">
+      <div class="xl:ml-8 ml-0">
+        <h3 class="before:content-['<'] after:content-['>'] text-lg text-left text-opacity-40 text-lighteraboutme mb-8">portfolio</h3>
+        <div class="flex mr-8 md:gap-20 gap-4 md:flex-row flex-col">
+          <div class="w-full">
+              <div class="pl-2 sm:pl-4">
+                <h1 class="text-white text-4xl font-medium text-left">About Me</h1>
+                <h2 class="text-white text-xl mt-8 font-light text-left md:mb-4 mb-4">
+                  Hello! I am a 17 year old student from the Greater Manchester area, studying Information Technology Extended Diploma at College. I have a passion in Programming, Software Development and Frontend Development, and I enjoy constantly improving existing skills and learning new ones.
+                </h2>
+              </div>
+          </div>
+          <div class="w-full">
+              <div class="pl-2 sm:pl-4">
+                <h1 class="text-white text-4xl font-medium text-left">Interests</h1>
+                <h2 class="text-white text-lg sm:text-xl mt-8 font-light text-left"><span class="mr-4">➔</span>Computer Hardware</h2>
+                <h2 class="text-white text-lg sm:text-xl font-light text-left"><span class="mr-4">➔</span>Programming</h2>
+                <h2 class="text-white text-lg sm:text-xl font-light text-left"><span class="mr-4">➔</span>Frontend Development</h2>
+                <h2 class="text-white text-lg sm:text-xl font-light text-left"><span class="mr-4">➔</span>Software Development</h2>
+                <h2 class="text-white text-lg sm:text-xl font-light text-left"><span class="mr-4">➔</span>UI/UX Design</h2>
+              </div>
+          </div>
+        </div>
+        <h3 class="before:content-['<'] after:content-['>'] text-lg text-left text-opacity-40 text-lighteraboutme mt-8">/portfolio</h3>
+
+      </div>
+    </div>
+    <div class="bg-aboutmebackground h-24" style="clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 0);"> </div>
+    <div class="min-h-24 h-auto pt-4 pb-16 w-full relative xl:pl-[12%] xl:pr-[15%] md:pl-12 pl-4 pr-10 md:pr-20" id="myskills">
+      <div class="xl:ml-8 ml-0">
+        <h3 class="before:content-['<'] after:content-['>'] text-lg text-left text-opacity-40 text-lighteraboutme mb-8">portfolio</h3>
+        <div class="pl-2 sm:pl-4">
+           <h1 class="text-white text-4xl font-medium text-left">My Skills</h1>
+           <div class="mt-8 flex flex-col md:flex-row gap-4 md:flex-wrap">
+             <div v-for="item in this.skillsJson" class='md:w-[48%] w-full border-2 p-4 rounded-xl border-skillsoutline pl-4 pr-12 flex items-center justify-start gap-4 relative after:content-[""] after:left-[-3px] after:w-[calc(100%_+_5px)] after:h-[calc(100%_+_5px)] after:absolute after:border-[3px] after:rounded-xl after:border-skillsoutline after:duration-75 hover:after:border-0' :style="{'border-color': item.colour}">
+               <img v-if="item.logo" :src="require(`@/assets/images/`+item.logo)" :href="item.skill" class="w-12 h-12">
+               <span v-if="!item.logo" class="h-12 w-0"></span>
+               <h1 class="font-normal text-skillstext text-2xl">{{item.skill}}</h1>
+             </div>
+           </div>
+        </div>
+         <h3 class="before:content-['<'] after:content-['>'] text-lg text-left text-opacity-40 text-lighteraboutme mt-8">/portfolio</h3>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import KUTE from 'kute.js'
+import skills from '@/assets/data/skills.json'
+
+export default{
+  data(){
+    return{
+      skillsJson: null
+    }
+  },
+  mounted(){
+    var tween1 = KUTE.fromTo('#logo-banner-path-1',{draw:'100% 100%'},{draw: '0% 100%'},{duration:500}).start()
+    var tween2 = KUTE.fromTo('#logo-banner-path-2',{draw:'100% 100%'},{draw: '0% 100%'},{duration:500}).start()
+    var tween3 = KUTE.fromTo('#logo-banner-path-3',{draw:'100% 100%'},{draw: '0% 100%'},{duration:500}).start()
+    var tween4 = KUTE.fromTo('#logo-banner-path-4',{draw:'100% 100%'},{draw: '0% 100%'},{duration:500}).start()
+    var tween5 = KUTE.fromTo('#logo-banner-path-5',{draw:'100% 100%'},{draw: '0% 100%'},{duration:500}).start()
+    var tween6 = KUTE.fromTo('#logo-banner-path-6',{draw:'100% 100%'},{draw: '0% 100%'},{duration:500}).start()
+
+    var tween7 = KUTE.fromTo('#banner-logo-svg',{attr:{fill: 'transparent'}},{attr:{fill: '#237DCF'}},{delay: 1000}).start()
+
+
+    this.skillsJson = skills
+
+  }
+}
+
+</script>
