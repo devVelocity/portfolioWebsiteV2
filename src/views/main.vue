@@ -66,20 +66,52 @@
              </div>
            </div>
         </div>
-         <h3 class="before:content-['<'] after:content-['>'] text-lg text-left text-opacity-40 text-lighteraboutme mt-8">/portfolio</h3>
+        <h3 class="before:content-['<'] after:content-['>'] text-lg text-left text-opacity-40 text-lighteraboutme mt-8">/portfolio</h3>
       </div>
     </div>
+
+    <div class="min-h-24 h-auto pt-4 pb-16 w-full relative xl:pl-[12%] xl:pr-[15%] md:pl-12 pl-4 pr-10 md:pr-20"  v-if="this.otherSkillsJSON == null || this.otherSkillsJSON.length != 0">
+      <div class="xl:ml-8 ml-0">
+        <h3 class="before:content-['<'] after:content-['>'] text-lg text-left text-opacity-40 text-lighteraboutme mb-8">portfolio</h3>
+        <div class="pl-2 sm:pl-4">
+           <h1 class="text-white text-4xl font-medium text-left">Other Skills</h1>
+           <div class="mt-8 gap-4 flex">
+             <h1 v-for="item in this.otherSkillsJSON" class="text-white text-xl w-1/4 text-left font-regular"><span class="mr-4">➔</span>{{item}}</h1>
+           </div>
+        </div>
+        <h3 class="before:content-['<'] after:content-['>'] text-lg text-left text-opacity-40 text-lighteraboutme mt-8">/portfolio</h3>
+      </div>
+    </div>
+
+        <div class="min-h-24 h-auto pt-4 pb-16 w-full relative xl:pl-[12%] xl:pr-[15%] md:pl-12 pl-4 pr-10 md:pr-20">
+      <div class="xl:ml-8 ml-0">
+        <h3 class="before:content-['<'] after:content-['>'] text-lg text-left text-opacity-40 text-lighteraboutme mb-8">portfolio</h3>
+        <div class="pl-2 sm:pl-4">
+           <h1 class="text-white text-4xl font-medium text-left">My Projects</h1>
+           <div class="mt-8 gap-4 flex flex-col">
+          
+           </div>
+        </div>
+        <h3 class="before:content-['<'] after:content-['>'] text-lg text-left text-opacity-40 text-lighteraboutme mt-8">/portfolio</h3>
+      </div>
+    </div>
+
+
   </div>
 </template>
 
 <script>
 import KUTE from 'kute.js'
 import skills from '@/assets/data/skills.json'
+import otherskills from '@/assets/data/otherskills.json'
+import projectsJSON from '@/assets/data/projects.json'
 
 export default{
   data(){
     return{
-      skillsJson: null
+      skillsJson: null,
+      otherSkillsJSON: null,
+      projectsImported: null
     }
   },
   mounted(){
@@ -94,6 +126,8 @@ export default{
 
 
     this.skillsJson = skills
+    this.otherSkillsJSON = otherskills
+    this.projectsImported = projectsJSON
 
   }
 }
