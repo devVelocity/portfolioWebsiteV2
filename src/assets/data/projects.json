@@ -1,0 +1,33 @@
+[
+    {
+    "title":"Hot Beans Web",
+    "images": ["/src/images/hotbeans1.JPG","/src/images/hotbeans2.JPG","/src/images/hotbeans3.JPG"],
+    "description":"Hot Beans Web was a mock company who wanted a website designed to promote their business to those looking to work for the company as a Web Developer. As part of this project I had to create pages for: The Companies Portfolio, the companies current staff members, the job specification and relevant qualifications, courses relevant to the job role and an application page to take applications.",
+    "achievements":"This was my first time developing a full website in a scenario where it would be developed for a client, and it made me think about taking measures to ensure the website works for those with accessibility needs (such as adding ARIA tags and Alt Text)",
+    "improvements":"Improvement could be used with the Animations of the website, sometimes there may have been multiple animations occurring at the same time which hurts performance. I could have removed some animations or taken measures (such as staggering them) in order to improve performance. I also think more consideration to the User Interface and User Experience should have happend with the Application Form, as they could be designed to look better and be more easier to use.",
+    "elementsused":[{"logo":"/src/images/HTML5_Badge_512.png","name":"HTML"},{"logo":"/src/images/CSS3_logo_and_wordmark.svg.png","name":"CSS"},{"logo":"/src/images/2048px-Unofficial_JavaScript_logo_2.svg.png","name":"JS"}],
+    "currentProject":false,
+    "dropdownOpen": false
+    },
+    {
+    "title":"The Pizza Restauraunt",
+    "images":["/src/images/pizza1.JPG","/src/images/pizza2.JPG","/src/images/pizza3.JPG","/src/images/pizza4.JPG","/src/images/pizza5.JPG","/src/images/pizza6.JPG","/src/images/pizza7.JPG","/src/images/pizza8.JPG"],
+    "description":"'The Pizza Restauraunt' is a website developed by me where the intended client is a restauraunt that will use this website for taking delivery orders and acting as a way for customers to view about the business and its menu. The website makes use of the features of the Vue Framework by using 'V-IF' and 'V-FOR' statements in order to fetch menu data from where it is stored in a JSON File. The added power that the Vue Framework provides also allowed me to add the option for the user to filter the menu by type, which can be expanded later on by adding more buttons for more filter criteria. A JSON File is also used to store discount codes which will be used to check if a user-entered discount code is correct or not, and if it is correct to get the amount (in currency or a percentage of the total) that the discount is worth.",
+    "achievements":"One of my main achievements with this project is being able to create a full project with VueJS. This allowed me to use my learned knowledge of VueJS and apply it to a scenario in order to improve my skills and learn new pieces of knowledge. I also think a great achievement was how I was able to get the menu system working. The Vue Router had an ID tag than could be changed for a certain link, this therefore allowed me to assign each ID tag to a menu item that can be fetched from the JSON. This therefore allowed me to have one single page that can be used to show all of the menu items through the use of loading the data about the item from the JSON file and binding the data to elements in the HTML using Vue. This also allows me to add new menu items easily by just adding new data to the JSON File, rather than having to add new HTML Elements and Pages",
+    "improvements":"While my UI/UX Design has improved, I still think there is room for improvement in order to improve the website appearence and the user experience. I think the design of some of the headers, buttons and other smaller elements of the Website can be improved and there could be more consistency. I feel that there is a large amount of elements that should all be consistent in their shape and design and yet are different to one another on different pages. This should be improved next time as it can be confusing and negatively effect user experience.",
+    "elementsused":[{"logo":"/src/images/vue.png","name":"VueJS"},{"logo":"/src/images/CSS3_logo_and_wordmark.svg.png","name":"CSS"},{"logo":"/src/images/json.png","name":"JSON"},{"logo":"","name":"GSAP"}],
+    "currentProject":false,
+    "dropdownOpen": false
+    },
+    {
+    "title":"Todo List / Kanban Board",
+    "images":[],
+    "description":"",
+    "elementsused":[],
+    "currentProject": true,
+    "ToDoList":[{"content":"Complete a Login Page w/Firebase Auth","completed":true},{"content":"Complete a Home Page","completed":false}]
+    
+    }
+]
+
+

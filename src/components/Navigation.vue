@@ -13,7 +13,7 @@
     </div>
     <div class="md:flex gap-12 hidden">
       <!-- <a class="text-white hover:cursor-pointer text-opacity-50 relative hover:text-opacity-100 duration-100 after:w-[80%] after:ml-[10%] after:h-0 after:rounded-lg after:duration-300 after:bg-opacity-0 hover:after:bg-opacity-100 after:bg-white hover:after:h-[2px] after:absolute after:block after:bottom-0 hover:after:bottom-[-5px] text-lg">About Me</a> -->
-      <router-link :to="{name:'mainpage',hash:'#aboutme'}" class="font-normal text-white hover:cursor-pointer text-opacity-60 relative hover:text-opacity-100 duration-100 after:w-0 hover:after:w-full after:rounded-lg after:duration-300 after:bg-opacity-0 hover:after:bg-opacity-100 after:bg-white after:h-[2px] after:absolute after:block after:bottom--2 text-lg">About Me</router-link>
+      <router-link :to="{name:'mainpage',hash:'#banner'}" class="font-normal text-white hover:cursor-pointer text-opacity-60 relative hover:text-opacity-100 duration-100 after:w-0 hover:after:w-full after:rounded-lg after:duration-300 after:bg-opacity-0 hover:after:bg-opacity-100 after:bg-white after:h-[2px] after:absolute after:block after:bottom--2 text-lg">About Me</router-link>
       <router-link :to="{name:'mainpage',hash:'#myskills'}" class="font-normal text-white hover:cursor-pointer text-opacity-60 relative hover:text-opacity-100 duration-100 after:w-0 hover:after:w-full after:rounded-lg after:duration-300 after:bg-opacity-0 hover:after:bg-opacity-100 after:bg-white after:h-[2px] after:absolute after:block after:bottom--2 text-lg">Skills</router-link>
     </div>
   </div>
