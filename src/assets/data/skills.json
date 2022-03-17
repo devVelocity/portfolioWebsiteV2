@@ -2,41 +2,49 @@
     {
         "skill":"JavaScript",
         "logo":"2048px-Unofficial_JavaScript_logo_2.svg.png",
-        "colour":"#F0DB4F"
+        "colour":"#F0DB4F",
+        "hover":false
     },
     {
         "skill":"Python",
         "logo":"110px-Python-logo-notext.svg.png",
-        "colour":"#FFD43B"
+        "colour":"#FFD43B",
+        "hover":false
     },
     {
         "skill":"Visual Basic",
-        "colour":"rgb(55, 32, 186)"
+        "colour":"rgb(55, 32, 186)",
+        "hover":false
     },
     {
         "skill":"TypeScript",
         "logo":"Typescript_logo_2020.png",
-        "colour":"#007acc"
+        "colour":"#007acc",
+        "hover":false
     },
     {
         "skill":"VueJS",
         "logo":"vue.png",
-        "colour":"#41B883"
+        "colour":"#41B883",
+        "hover":false
     },
     {
         "skill":"TailwindCSS",
         "logo":"Tailwind_CSS_Logo.png",
-        "colour":"rgb(56, 189, 248)"
+        "colour":"rgb(56, 189, 248)",
+        "hover":false
     },
     {
         "skill":"HTML",
         "logo":"HTML5_Badge_512.png",
-        "colour":"#e34c26"
+        "colour":"#e34c26",
+        "hover":false
     },
     {
         "skill":"CSS",
         "logo":"CSS3_logo_and_wordmark.svg.png",
-        "colour":"#264de4"
+        "colour":"#264de4",
+        "hover":false
     }
 
 ]

@@ -59,7 +59,7 @@
         <div class="pl-2 sm:pl-4">
            <h1 class="text-white text-4xl font-medium text-left">My Skills</h1>
            <div class="mt-8 flex flex-col md:flex-row gap-4 md:flex-wrap">
-             <div v-for="item in this.skillsJson" class='md:w-[48%] w-full border-2 p-4 rounded-xl border-skillsoutline pl-4 pr-12 flex items-center justify-start gap-4 relative after:content-[""] after:left-[-3px] after:w-[calc(100%_+_5px)] after:h-[calc(100%_+_5px)] after:absolute after:border-[3px] after:rounded-xl after:border-skillsoutline after:duration-75 hover:after:border-0' :style="{'border-color': item.colour}">
+             <div v-for="item in this.skillsJson" class='md:w-[48%] border-[2px] shover:border-solid border-opacity-20 p-4 rounded-xl pl-4 pr-12 flex items-center justify-start gap-4 relative after:content-[""] after:left-[-2.1px] after:w-[calc(100%_+_4px)] after:h-[calc(100%_+_4px)] after:absolute after:border-[2px] after:rounded-xl after:border-skillsoutline after:duration-75 hover:after:border-0' :style="{'border-color': item.colour}" @mouseover="item.hover = true">
                <img v-if="item.logo" :src="require(`@/assets/images/`+item.logo)" :href="item.skill" class="w-12 h-12">
                <span v-if="!item.logo" class="h-12 w-0"></span>
                <h1 class="font-normal text-skillstext text-2xl">{{item.skill}}</h1>
@@ -83,13 +83,108 @@
       </div>
     </div>
 
-        <div class="min-h-24 h-auto pt-4 pb-16 w-full relative xl:pl-[12%] xl:pr-[15%] md:pl-12 pl-4 pr-10 md:pr-20">
+    <div class="min-h-24 h-auto pt-4 pb-16 w-full relative xl:pl-[12%] xl:pr-[15%] md:pl-12 pl-4 pr-10 md:pr-20">
       <div class="xl:ml-8 ml-0">
         <h3 class="before:content-['<'] after:content-['>'] text-lg text-left text-opacity-40 text-lighteraboutme mb-8">portfolio</h3>
         <div class="pl-2 sm:pl-4">
            <h1 class="text-white text-4xl font-medium text-left">My Projects</h1>
-           <div class="mt-8 gap-4 flex flex-col">
-          
+           <div class="mt-8 gap-4 flex flex-col" v-if="filterCriteria == null">
+             <div v-for="item in this.projectsImported">
+               <div class="border-[2px] border-skillsoutline p-4 flex justify-between hover:cursor-pointer" @click="item.dropdownOpen = !item.dropdownOpen" :class="{dropdownOpen: item.dropdownOpen},{dropdownItem: !item.dropdownOpen}">
+                <h1 class="text-skillstext text-2xl text-left font-regular">{{item.title}}</h1>
+                <svg xmlns="http://www.w3.org/2000/svg" v-if="!item.dropdownOpen" class="h-6 w-6 stroke-white stroke-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 stroke-white stroke-2" v-if="item.dropdownOpen" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+                </svg>
+               </div>
+               <div v-if="item.dropdownOpen" class="border-skillsoutline border-[2px] rounded-b-lg border-t-[1px]">
+                 <div class="flex p-8 gap-12 md:flex-row flex-col">
+                   <div class="w-full">
+                     <div class="image rounded-xl mb-6 mt-2 relative group" v-if="item.images.length != 0">
+                       <div class="absolute w-full h-full bg-black rounded-lg bg-opacity-0 group-hover:bg-opacity-80 duration-100 flex items-center justify-center gap-4 hover:cursor-pointer">
+                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 opacity-0 group-hover:opacity-100 stroke-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                        </svg>
+                        <h1 class="opacity-0 group-hover:opacity-100 text-white">View Images</h1>
+                       </div>
+                       <img :src="require(`@/assets/images/`+item.images[0])" class="rounded-lg">
+                     </div>
+                     <div class="flex gap-4">
+                        <a class="w-full flex border-[1px] rounded-lg p-2 items-center justify-center hover:cursor-pointer" :href="item.viewlink" v-if="item.viewlink != null">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 block stroke-white mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                          </svg>
+                          <h1 class="text-white">View Project</h1>
+                        </a>
+                        <a class="w-full flex border-[1px] border-red-700 rounded-lg p-2 items-center justify-center" v-if="!item.source || item.source == 'p'">
+                          <!-- <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 block stroke-white mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                          </svg> -->
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 block stroke-skillstext mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21" />
+                          </svg>
+                          <h1 class="text-skillstext">Source Private</h1>
+                        </a>
+                        <a class="w-full flex border-[1px] border-white rounded-lg p-2 items-center justify-center hover:cursor-pointer" v-if="item.source != 'p'" :href="item.source">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 block stroke-white mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                          </svg>
+                          <!-- <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 block stroke-skillstext mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21" />
+                          </svg> -->
+                          <h1 class="text-white">View Source</h1>
+                        </a>
+                     </div>
+                      <div v-if="item.todo" class="mt-12">
+                        <h1 class="text-white text-2xl text-left font-normal">To Do List</h1>
+                        <div class="flex mt-4 ml-4">
+                          <div class=""><div class="w-[2px] h-full bg-skillsoutline"></div></div>
+                          <div class="w-full">
+                            <div v-for="entries in item.todo" class="text-left text-white mt-3 first:mt-0">
+                              <div v-if="entries.completed" class="relative flex ml-4 h-auto">
+                                  <span class="mr-4 pl-1 pr-1 mt-0 border-[1px] border-green-700 bg-green-700 text-white rounded-sm">Done</span>
+                                  <h2 class="">
+                                    {{entries.content}}
+                                  </h2>
+                              </div>
+                              <div v-else class="relative flex ml-4">
+                                  <span class="mr-4 pl-1 pr-1 mt-0 border-[1px] border-skillsoutline text-skillsoutline rounded-sm">WIP</span>
+                                  <h2 class="">
+                                    {{entries.content}}
+                                  </h2>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                     </div>
+                     <div class="mt-12" v-if="item.elementsused.length != 0">
+                        <h1 class="text-white text-2xl text-left font-normal">Elements Used</h1>
+                     </div>
+                   </div>
+                   <div class="w-full">
+                     <div v-if="item.scenario">
+                       <h1 class="text-white text-3xl text-left font-normal">Scenario</h1>
+                       <h2 class="text-left text-white mt-6 font-light">{{item.scenario}}</h2>
+                     </div>
+                    <div v-if="item.achievements" class="mt-12">
+                       <h1 class="text-white text-3xl text-left font-normal">Achievements</h1>
+                       <h2 class="text-left text-white mt-6 font-light">{{item.achievements}}</h2>
+                     </div>
+                     <div v-if="item.challenges" class="mt-12">
+                       <h1 class="text-white text-3xl text-left font-normal">Challenges</h1>
+                       <h2 class="text-left text-white mt-6 font-light">{{item.challenges}}</h2>
+                     </div>
+                     <div v-if="item.noteablefeatures.length != 0" class="mt-12">
+                       <h1 class="text-white text-3xl text-left font-normal">Noteable Features</h1>
+                       <h2 v-for="features in item.noteablefeatures" class="text-left text-white mt-6 font-light"><span class="mr-4">➔</span>{{features}}</h2>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+             </div>
            </div>
         </div>
         <h3 class="before:content-['<'] after:content-['>'] text-lg text-left text-opacity-40 text-lighteraboutme mt-8">/portfolio</h3>
@@ -111,7 +206,8 @@ export default{
     return{
       skillsJson: null,
       otherSkillsJSON: null,
-      projectsImported: null
+      projectsImported: null,
+      filterCriteria: null,
     }
   },
   mounted(){
@@ -133,3 +229,16 @@ export default{
 }
 
 </script>
+
+<style>
+.dropdownOpen{
+  border-bottom: 0px;
+  border-radius: 0.75rem;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.dropdownItem{
+  border-radius: 0.75rem;
+}
+</style>
