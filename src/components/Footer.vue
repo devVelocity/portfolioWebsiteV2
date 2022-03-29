@@ -4,7 +4,7 @@
         <div class="min-h-24 h-auto pt-4 pb-16 w-full relative xl:pl-[12%] xl:pr-[15%] md:pl-12 pl-4 pr-10 md:pr-20">
             <h3 class="before:content-['<'] after:content-['>'] text-lg text-left text-opacity-40 text-lighteraboutme mb-8">footer</h3>
             <div class="pl-2 sm:pl-4">
-                <div class="flex w-full h-auto gap-8">
+                <div class="flex w-full h-auto gap-8 flex-col md:flex-row">
                     <div class="w-full">
                         <h1 class="text-white text-2xl font-medium text-left pb-4">Website Created With</h1>
                         <h2 class="text-white text-lg font-light text-opacity-60 text-left">➔<span class="ml-4">Vue.js</span></h2>
@@ -20,6 +20,9 @@
                         <h1 class="text-white text-2xl font-medium text-left">Get in Touch!</h1>
                     </div>
                 </div>
+                <span class="block w-full h-[1px] bg-footerline rounded-md mt-12"></span>
+                <h1 class="text-left text-white font-light mt-8">© Kieran P - 2022</h1>
+                <h1 class="text-left text-white font-light mt-1 text-opacity-50">Have a good {{dayToday}}!</h1>
             </div>
         </div>
     </div>
@@ -28,7 +31,31 @@
 
 <script>
 export default {
-
+    data(){
+        return{
+            dayToday: "none",
+        }
+    },
+    mounted(){
+        const d = new Date();
+        let day = d.getDay()      
+        
+        if (day == 0){
+            this.dayToday = "Sunday"
+        }else if (day == 1){
+            this.dayToday = "Monday"
+        }else if (day == 2){
+            this.dayToday = "Tuesday"
+        }else if (day == 3){
+            this.dayToday = "Wednesday"
+        }else if (day == 4){
+            this.dayToday = "Thursday"
+        }else if (day == 5){
+            this.dayToday = "Friday"
+        }else if (day == 6){
+            this.dayToday = "Saturday"
+        }
+    }
 }
 </script>
 
