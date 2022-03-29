@@ -16,7 +16,9 @@ module.exports = {
         "aboutmebackground":"#2B3446",
         "lighteraboutme":"#5d7199",
         "skillstext":"#9CA5BA",
-        "skillsoutline":"#4A515F"
+        "skillsoutline":"#4A515F",
+        "footerone":"#1B1F28",
+        "footertwo":"13151C"
       }
     },
   },

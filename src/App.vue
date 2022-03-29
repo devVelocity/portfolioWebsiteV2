@@ -2,14 +2,17 @@
   <navigation/>
   <span class="block h-20"></span>
   <router-view/>
+  <footer/>
 </template>
 
 <script>
 import navigation from '@/components/Navigation.vue'
+import footer from '@/components/Footer.vue'
 
 export default {
   components: {
-    navigation
+    navigation,
+    footer
   }
 }
 </script>

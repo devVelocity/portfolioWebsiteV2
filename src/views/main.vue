@@ -91,7 +91,8 @@
           <div class="mt-8 gap-4 flex flex-col" v-if="filterCriteria == null">
              <div v-for="item in this.projectsImported">
                <div class="border-[2px] border-skillsoutline p-4 flex justify-between hover:cursor-pointer" @click="item.dropdownOpen = !item.dropdownOpen" :class="{dropdownOpen: item.dropdownOpen},{dropdownItem: !item.dropdownOpen}">
-                <h1 class="text-skillstext text-2xl text-left font-regular">{{item.title}}</h1>
+                <h1 class="text-skillstext text-2xl text-left font-regular w-[90%]" v-if="item.currentProject" ><span class="w-auto block sm:inline-block mb-4 sm:mb-0 mr-4 text-sm p-1 bg-yellow-500 bg-opacity-40 text-white rounded-md">Ongoing</span>{{item.title}}</h1>
+                <h1 class="text-skillstext text-2xl text-left font-regular" v-if="!item.currentProject">{{item.title}}</h1>
                 <svg xmlns="http://www.w3.org/2000/svg" v-if="!item.dropdownOpen" class="h-6 w-6 stroke-white stroke-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                 </svg>
@@ -203,12 +204,16 @@
         <h3 class="before:content-['<'] after:content-['>'] text-lg text-left text-opacity-40 text-lighteraboutme mt-8">/portfolio</h3>
       </div>
     </div>
-    <div class="min-h-24 h-auto pt-4 pb-16 w-full relative xl:pl-[12%] xl:pr-[15%] md:pl-12 pl-4 pr-10 md:pr-20">
+    <div class="min-h-24 h-auto pt-4 pb-16 w-full relative xl:pl-[12%] xl:pr-[15%] md:pl-12 pl-4 pr-10 md:pr-20" id="myblog">
       <div class="xl:ml-8 ml-0">
-        <h3 class="before:content-['<'] after:content-['>'] text-lg text-left text-opacity-40 text-lighteraboutme mt-8">portfolio</h3>
+        <h3 class="before:content-['<'] after:content-['>'] text-lg text-left text-opacity-40 text-lighteraboutme mb-8">portfolio</h3>
         <div class="pl-2 sm:pl-4">
-          
+           <h1 class="text-white text-4xl font-medium text-left">My Blog</h1>
+           <div class="w-full h-auto mt-12">
+             <iframe src="https://projectworkblogp.blogspot.com/" class="w-full h-[600px]"></iframe>
+           </div>
         </div>
+        <h3 class="before:content-['<'] after:content-['>'] text-lg text-left text-opacity-40 text-lighteraboutme mt-8">/portfolio</h3>
       </div>
     </div>
   </div>
