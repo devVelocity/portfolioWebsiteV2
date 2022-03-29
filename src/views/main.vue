@@ -87,8 +87,8 @@
       <div class="xl:ml-8 ml-0">
         <h3 class="before:content-['<'] after:content-['>'] text-lg text-left text-opacity-40 text-lighteraboutme mb-8">portfolio</h3>
         <div class="pl-2 sm:pl-4">
-           <h1 class="text-white text-4xl font-medium text-left">My Projects</h1>
-           <div class="mt-8 gap-4 flex flex-col" v-if="filterCriteria == null">
+          <h1 class="text-white text-4xl font-medium text-left">My Projects</h1>
+          <div class="mt-8 gap-4 flex flex-col" v-if="filterCriteria == null">
              <div v-for="item in this.projectsImported">
                <div class="border-[2px] border-skillsoutline p-4 flex justify-between hover:cursor-pointer" @click="item.dropdownOpen = !item.dropdownOpen" :class="{dropdownOpen: item.dropdownOpen},{dropdownItem: !item.dropdownOpen}">
                 <h1 class="text-skillstext text-2xl text-left font-regular">{{item.title}}</h1>
@@ -114,8 +114,11 @@
                      </div>
                      <div class="flex gap-4">
                         <a class="w-full flex border-[1px] rounded-lg p-2 items-center justify-center hover:cursor-pointer" :href="item.viewlink" v-if="item.viewlink != null">
-                          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 block stroke-white mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                          <!-- <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 block stroke-white mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                             <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                          </svg> -->
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 stroke-white mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                           </svg>
                           <h1 class="text-white">View Project</h1>
                         </a>
@@ -162,6 +165,13 @@
                      </div>
                      <div class="mt-12" v-if="item.elementsused.length != 0">
                         <h1 class="text-white text-2xl text-left font-normal">Elements Used</h1>
+                        <div class="w-full h-auto flex gap-4 mt-8 flex-wrap">
+                          <div v-for="element in item.elementsused" class="flex gap-4 w-full lg:w-[48%] border-skillsoutline border-[1px] rounded-md p-2 items-center justify-center">
+                            <img v-if="element.logo != ''" :src="require('@/assets/images/' + element.logo)" :alt="element.name" class="w-8 h-8">
+                            <!-- <img v-if="element.logo == ''" src="" alt="" class="w-8 h-8"> -->
+                            <h1 class="text-white text-lg font-light">{{element.name}}</h1>
+                          </div>
+                        </div>
                      </div>
                    </div>
                    <div class="w-full">
@@ -186,12 +196,21 @@
                </div>
              </div>
            </div>
+           <div v-else>
+             <h1>Criteria being filtered</h1>
+           </div>
         </div>
         <h3 class="before:content-['<'] after:content-['>'] text-lg text-left text-opacity-40 text-lighteraboutme mt-8">/portfolio</h3>
       </div>
     </div>
-
-
+    <div class="min-h-24 h-auto pt-4 pb-16 w-full relative xl:pl-[12%] xl:pr-[15%] md:pl-12 pl-4 pr-10 md:pr-20">
+      <div class="xl:ml-8 ml-0">
+        <h3 class="before:content-['<'] after:content-['>'] text-lg text-left text-opacity-40 text-lighteraboutme mt-8">portfolio</h3>
+        <div class="pl-2 sm:pl-4">
+          
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 

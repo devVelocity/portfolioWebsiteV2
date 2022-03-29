@@ -1,5 +1,5 @@
 <template>
-  <div class="navigation bg-headercol h-20 z-40 flex items-center xl:pl-[12%] xl:pr-[12%] pl-4 pr-4 justify-between fixed top-0 w-full">
+  <div class="navigation bg-headercol h-20 z-40 flex items-center xl:pl-[12%] xl:pr-[12%] pl-4 pr-8 justify-between fixed top-0 w-full">
     <div class="logo">
       <div class="relative w-16 h-16 flex items-center jusitfy-center">
         <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute top-4">
