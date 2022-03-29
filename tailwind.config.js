@@ -18,7 +18,7 @@ module.exports = {
         "skillstext":"#9CA5BA",
         "skillsoutline":"#4A515F",
         "footerone":"#1B1F28",
-        "footertwo":"13151C"
+        "footertwo":"#13151C"
       }
     },
   },
