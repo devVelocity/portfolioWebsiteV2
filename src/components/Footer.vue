@@ -13,11 +13,18 @@
                         <h2 class="text-white text-lg font-light text-opacity-60 text-left">➔<span class="ml-4">JSON</span></h2>
                         <h2 class="text-white text-lg font-light text-opacity-10 text-left pt-4">➔<span class="ml-4">> 100 Cups of Coffee</span></h2>
                     </div>
-                    <div class="w-full">
-                        <h1 class="text-white text-2xl font-medium text-left">Page Navigation</h1>
+                    <div class="w-full relative">
+                        <h1 class="text-white text-2xl font-medium text-left pb-4">Page Navigation</h1>
+                        <router-link :to="{name:'mainpage',hash:'#banner'}" class="font-normal text-left block absolute left-0  text-lg text-footerurl hover:text-footerurlhover duration-100">About Me</router-link>
+                        <router-link :to="{name:'mainpage',hash:'#myskills'}" class="font-normal text-left block absolute left-0  text-lg text-footerurl hover:text-footerurlhover duration-100 mt-[25px] ">Skills</router-link>
+                        <router-link :to="{name:'mainpage',hash:'#myprojects'}" class="font-normal text-left block absolute left-0  text-lg text-footerurl hover:text-footerurlhover duration-100 mt-[50px] ">Projects</router-link>
+                        <router-link :to="{name:'mainpage',hash:'#myblog'}" class="font-normal text-left block absolute left-0  text-lg text-footerurl hover:text-footerurlhover duration-100 mt-[75px] ">Blog</router-link>
+                        <router-link :to="{name:'mainpage',hash:'#mycontact'}" class="font-normal text-left block absolute left-0  text-lg text-footerurl hover:text-footerurlhover duration-100 mt-[100px] ">Contact</router-link>
                     </div>
-                    <div class="w-full">
-                        <h1 class="text-white text-2xl font-medium text-left">Get in Touch!</h1>
+                    <div class="w-full relative">
+                        <h1 class="text-white text-2xl font-medium text-left pb-4">Get in Touch!</h1>
+                        <a href="https://www.linkedin.com/in/07030b20b/" class="font-normal text-left block absolute left-0  text-lg text-footerurl hover:text-footerurlhover duration-100">LinkedIn</a>
+                        <a href="https://github.com/devVelocity" class="font-normal text-left block absolute left-0  text-lg text-footerurl hover:text-footerurlhover duration-100 mt-[25px]">GitHub</a>
                     </div>
                 </div>
                 <span class="block w-full h-[1px] bg-footerline rounded-md mt-12"></span>
