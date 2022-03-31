@@ -1,5 +1,9 @@
 # Portfolio V2
 
+## About Project
+
+This is my portfolio website for my work. It functions using Vue.JS, JSON and Tailwind
+
 ## Project setup
 ```
 npm install
