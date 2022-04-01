@@ -7,7 +7,7 @@
           <h2 class="text-2xl text-white mt-12 text-left font-light"><span class="mr-4 animate-wiggle inline-block">👋</span>Hello!</h2>
           <h1 class="text-5xl text-white mt-6 text-left font-medium">Welcome to my Portfolio!</h1>
           <h3 class="text-lg text-white mt-8 text-left font-extralight">Frontend Development / Software Development / Programming</h3>
-          <router-link to="#contact" class="left-4 text-white font-normal p-2 pl-4 pr-4 rounded-lg hover:bg-blue-800 duration-100 bg-blue-600 block w-fit mt-8">Get in Touch</router-link>
+          <router-link :to="{name:'mainpage',hash:'#mycontact'}" class="left-4 text-white font-normal p-2 pl-4 pr-4 rounded-lg hover:bg-blue-800 duration-100 bg-blue-600 block w-fit mt-8">Get in Touch</router-link>
         </div>
         <h3 class="before:content-['<'] after:content-['>'] text-lg text-left mt-12">/div</h3>
       </div>
@@ -83,7 +83,7 @@
       </div>
     </div>
 
-    <div class="min-h-24 h-auto pt-4 pb-16 w-full relative xl:pl-[12%] xl:pr-[15%] md:pl-12 pl-4 pr-10 md:pr-20">
+    <div class="min-h-24 h-auto pt-4 pb-16 w-full relative xl:pl-[12%] xl:pr-[15%] md:pl-12 pl-4 pr-10 md:pr-20" id="myprojects">
       <div class="xl:ml-8 ml-0">
         <h3 class="before:content-['<'] after:content-['>'] text-lg text-left text-opacity-40 text-lighteraboutme mb-8">portfolio</h3>
         <div class="pl-2 sm:pl-4">
@@ -211,11 +211,36 @@
            <h1 class="text-white text-4xl font-medium text-left">My Blog</h1>
            <div class="w-full h-auto mt-12">
              <iframe src="https://projectworkblogp.blogspot.com/" class="w-full h-[600px]"></iframe>
+              <a href="https://projectworkblogp.blogspot.com/" class="left-4 text-white font-normal p-2 pl-4 pr-4 rounded-lg hover:bg-blue-800 duration-100 bg-blue-600 block w-fit mt-8">Open Blog Page</a>
            </div>
         </div>
         <h3 class="before:content-['<'] after:content-['>'] text-lg text-left text-opacity-40 text-lighteraboutme mt-8">/portfolio</h3>
       </div>
     </div>
+    <div class="min-h-24 h-auto pt-4 pb-8 w-full relative xl:pl-[12%] xl:pr-[15%] md:pl-12 pl-4 pr-10 md:pr-20" id="mycontact">
+      <div class="xl:ml-8 ml-0">
+        <h3 class="before:content-['<'] after:content-['>'] text-lg text-left text-opacity-40 text-lighteraboutme mb-8">portfolio</h3>
+          <div class="pl-2 sm:pl-4">
+            <h1 class="text-white text-4xl font-medium text-left">Get in Touch</h1>
+            <div class="flex gap-4">
+
+            </div>
+            <div class="pb-8 flex mt-8 gap-4">
+              <a class="group w-[48%] border-skillsoutline rounded-md border-[1px] hover:border-white duration-100 hover:cursor-pointer flex items-center justify-center gap-4 p-3">
+                <img class="opacity-30 group-hover:opacity-100 duration-100" src="@/assets/images/GitHub-Mark-Light-32px.png">
+                <h2 class="text-white text-opacity-30 text-xl group-hover:text-opacity-100 duration-100">GitHub</h2>
+              </a>
+              <a class="group w-[48%] border-skillsoutline rounded-md border-[1px] hover:border-white duration-100 hover:cursor-pointer flex items-center justify-center gap-4 p-3">
+                <!-- <img class="opacity-30 group-hover:opacity-100 duration-100" src="@/assets/images/GitHub-Mark-Light-32px.png"> -->
+                <h2 class="text-white text-opacity-30 text-xl group-hover:text-opacity-100 duration-100">LinkedIn</h2>
+              </a>
+            </div>
+          </div>
+        <h3 class="before:content-['<'] after:content-['>'] text-lg text-left text-opacity-40 text-lighteraboutme mb-8">/portfolio</h3>
+      </div>
+    </div>
+  
+  
   </div>
 </template>
 

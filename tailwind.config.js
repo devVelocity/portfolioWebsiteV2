@@ -20,7 +20,8 @@ module.exports = {
         "footerone":"#1B1F28",
         "footertwo":"#13151C",
         "footerline":"#454C59",
-        "footerurl":"#546EA5"
+        "footerurl":"#546EA5",
+        "footerurlhover":"#7296e0"
       }
     },
   },
