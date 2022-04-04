@@ -45,23 +45,12 @@ export default {
     },
     mounted(){
         const d = new Date();
-        let day = d.getDay()      
+        let day = d.getDay()     
         
-        if (day == 0){
-            this.dayToday = "Sunday"
-        }else if (day == 1){
-            this.dayToday = "Monday"
-        }else if (day == 2){
-            this.dayToday = "Tuesday"
-        }else if (day == 3){
-            this.dayToday = "Wednesday"
-        }else if (day == 4){
-            this.dayToday = "Thursday"
-        }else if (day == 5){
-            this.dayToday = "Friday"
-        }else if (day == 6){
-            this.dayToday = "Saturday"
-        }
+        dateArr = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+
+        this.dayToday = dateArr[day]
+        
     }
 }
 </script>
