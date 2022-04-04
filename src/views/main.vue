@@ -132,14 +132,14 @@
                           </svg>
                           <h1 class="text-skillstext">Source Private</h1>
                         </a>
-                        <a class="w-full flex border-[1px] border-white rounded-lg p-2 items-center justify-center hover:cursor-pointer" v-if="item.source != 'p'" :href="item.source">
-                          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 block stroke-white mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                        <a class="w-full flex border-[1px] border-white group border-opacity-50 duration-100 hover:border-opacity-100 rounded-lg p-2 items-center justify-center hover:cursor-pointer" v-if="item.source != 'p'" :href="item.source">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 block stroke-white duration-100 opacity-50 group-hover:opacity-100 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                             <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                           </svg>
                           <!-- <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 block stroke-skillstext mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                             <path strokeLinecap="round" strokeLinejoin="round" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21" />
                           </svg> -->
-                          <h1 class="text-white">View Source</h1>
+                          <h1 class="text-white text-opacity-50 group-hover:text-opacity-100 duration-100">View Source</h1>
                         </a>
                      </div>
                       <div v-if="item.todo" class="mt-12">
