@@ -33,7 +33,7 @@
     "challenges":"",
     "noteablefeatures":[],
     "currentProject": true,
-    "todo":[{"content":"Complete a Login Page w/Firebase Auth","completed":true},{"content":"Complete a Home Page","completed":false}],
+    "todo":[{"content":"Complete a Login Page w/Firebase Auth","completed":true},{"content":"Complete a Home Page","completed":true},{"content":"Add/Update/Remove Board Info","completed":false}],
     "source":"p",
     "dropdownOpen": false,
     "viewlink":null
