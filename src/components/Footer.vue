@@ -33,7 +33,9 @@
             </div>
         </div>
     </div>
-    <div class="bg-footertwo w-full min-h-[50px]"></div>
+    <div class="bg-footertwo w-full h-auto min-h-[50px]">
+        
+    </div>
 </template>
 
 <script>
@@ -41,15 +43,16 @@ export default {
     data(){
         return{
             dayToday: "none",
+            day: null,
         }
     },
     mounted(){
         const d = new Date();
-        let day = d.getDay()     
+        this.day = d.getDay()     
         
-        dateArr = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+        const dateArr = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
 
-        this.dayToday = dateArr[day]
+        this.dayToday = dateArr[this.day]
         
     }
 }
