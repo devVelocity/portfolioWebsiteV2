@@ -37,12 +37,12 @@
         <div>
            <h1 class="text-white font-normal text-left">Problem with this page?</h1>
            <div class="flex gap-2">
-            <router-link :to="{name:'mainpage',hash:'#mycontact'}" class="left-4 text-white p-1 pl-2 pr-2 rounded-lg hover:bg-blue-800 duration-100 bg-blue-600 block w-fit mt-2 font-light">Get in Touch</router-link>
-            <a href="https://github.com/devVelocity/portfolioWebsiteV2" class="left-4 text-white p-1 pl-2 pr-2 rounded-lg hover:bg-blue-800 duration-100 bg-blue-600 block w-fit mt-2 font-light">Help fix it on GitHub</a>
+            <router-link :to="{name:'mainpage',hash:'#mycontact'}" class="bg-opacity-20 left-4 text-white text-opacity-50 hover:text-opacity-100 p-1 pl-2 pr-2 rounded-lg hover:bg-blue-800 duration-100 bg-blue-600 block w-fit mt-2 font-light">Get in Touch</router-link>
+            <a href="https://github.com/devVelocity/portfolioWebsiteV2" class="bg-opacity-20 left-4 text-white text-opacity-50 hover:text-opacity-100 p-1 pl-2 pr-2 rounded-lg hover:bg-blue-800 duration-100 bg-blue-600 block w-fit mt-2 font-light">Help fix it on GitHub</a>
            </div>
         </div>
         <div class="flex items-center jusitfy-center">
-            <a @click="moveUp()" class="left-4 text-white p-1 pl-2 pr-2 rounded-lg hover:bg-blue-800 duration-100 bg-blue-600 block w-fit mt-2 font-light">Go to Top</a>
+            <a @click="moveUp()" class="left-4 text-white p-1 pl-2 pr-2 rounded-lg hover:bg-blue-800 bg-opacity-20 text-opacity-50 hover:text-opacity-100 duration-100 bg-blue-600 block w-fit mt-2 font-light">Go to Top</a>
         </div>
     </div>
 </template>
