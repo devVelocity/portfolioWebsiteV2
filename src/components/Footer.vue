@@ -33,7 +33,18 @@
             </div>
         </div>
     </div>
-    <div class="bg-footertwo w-full min-h-[50px]"></div>
+    <div class="bg-footertwo w-full h-auto min-h-[50px] flex pt-4 pb-4 relative xl:pl-[12%] xl:pr-[15%] md:pl-12 pl-4 pr-10 md:pr-20 justify-between">
+        <div>
+           <h1 class="text-white font-normal text-left">Problem with this page?</h1>
+           <div class="flex gap-2">
+            <router-link :to="{name:'mainpage',hash:'#mycontact'}" class="left-4 text-white p-1 pl-2 pr-2 rounded-lg hover:bg-blue-800 duration-100 bg-blue-600 block w-fit mt-2 font-light">Get in Touch</router-link>
+            <a href="https://github.com/devVelocity/portfolioWebsiteV2" class="left-4 text-white p-1 pl-2 pr-2 rounded-lg hover:bg-blue-800 duration-100 bg-blue-600 block w-fit mt-2 font-light">Help fix it on GitHub</a>
+           </div>
+        </div>
+        <div class="flex items-center jusitfy-center">
+            <a @click="moveUp()" class="left-4 text-white p-1 pl-2 pr-2 rounded-lg hover:bg-blue-800 duration-100 bg-blue-600 block w-fit mt-2 font-light">Go to Top</a>
+        </div>
+    </div>
 </template>
 
 <script>
@@ -41,27 +52,23 @@ export default {
     data(){
         return{
             dayToday: "none",
+            day: null,
+        }
+    },
+    methods:{
+        moveUp(){
+            console.log("hi")
+            window.scrollTo(0,0)
         }
     },
     mounted(){
         const d = new Date();
-        let day = d.getDay()      
+        this.day = d.getDay()     
         
-        if (day == 0){
-            this.dayToday = "Sunday"
-        }else if (day == 1){
-            this.dayToday = "Monday"
-        }else if (day == 2){
-            this.dayToday = "Tuesday"
-        }else if (day == 3){
-            this.dayToday = "Wednesday"
-        }else if (day == 4){
-            this.dayToday = "Thursday"
-        }else if (day == 5){
-            this.dayToday = "Friday"
-        }else if (day == 6){
-            this.dayToday = "Saturday"
-        }
+        const dateArr = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+
+        this.dayToday = dateArr[this.day]
+        
     }
 }
 </script>
