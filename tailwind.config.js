@@ -23,6 +23,7 @@ module.exports = {
         "footerurl":"#546EA5",
         "footerurlhover":"#7296e0",
         "mobileMenuBG":"#21242b",
+        "mobileMenuDivider":"#17191f",
       }
     },
   },
