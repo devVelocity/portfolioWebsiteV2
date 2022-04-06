@@ -1,5 +1,8 @@
 <template>
-  <div class="navigation bg-headercol h-20 z-40 flex items-center xl:pl-[12%] xl:pr-[12%] pl-4 pr-8 justify-between fixed top-0 w-full">
+  <div class="fixed block w-full h-screen top-20 bg-mobileMenuBG z-40 lg:hidden">
+
+  </div>
+  <div class="navigation bg-headercol h-20 z-40 flex items-center xl:pl-[12%] xl:pr-[12%] pl-4 pr-4 lg:pr-8 justify-between fixed top-0 w-full">
     <div class="logo">
       <div class="relative w-16 h-16 flex items-center jusitfy-center">
         <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute top-4">
@@ -11,7 +14,7 @@
         <h1 class=" text-white text-2xl left-8 absolute w-32 block opacity-0 sm:opacity-100 font-medium">Kieran P</h1>
       </div>
     </div>
-    <div @click="toggleMobileMenu" class="flex lg:hidden w-[40px] h-[50px] flex-col items-center justify-evenly opacity-30 hover:opacity-100 duration-100 hover:cursor-pointer">
+    <div @click="menuOpen = !menuOpen" class="flex lg:hidden w-[40px] h-[50px] flex-col items-center justify-evenly opacity-30 hover:opacity-100 duration-100 hover:cursor-pointer">
       <div class="h-[3px] w-full bg-white rounded-lg"></div>
       <div class="h-[3px] w-full bg-white rounded-lg"></div>
        <div class="h-[3px] w-full bg-white rounded-lg"></div>
@@ -29,7 +32,11 @@
 
 <script>
 export default {
-
+  data(){
+    return{
+      menuOpen: false
+    }
+  }
 }
 </script>
 
