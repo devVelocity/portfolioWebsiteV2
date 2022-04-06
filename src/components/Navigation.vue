@@ -1,5 +1,5 @@
 <template>
-  <div class="fixed block w-full h-screen top-20 bg-mobileMenuBG z-40 lg:hidden">
+  <div class="fixed block w-full h-screen top-20 bg-mobileMenuBG z-40 lg:hidden" v-if="menuOpen">
 
   </div>
   <div class="navigation bg-headercol h-20 z-40 flex items-center xl:pl-[12%] xl:pr-[12%] pl-4 pr-4 lg:pr-8 justify-between fixed top-0 w-full">
