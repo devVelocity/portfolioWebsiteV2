@@ -33,7 +33,7 @@
     "challenges":"",
     "noteablefeatures":[],
     "currentProject": true,
-    "todo":[{"content":"Complete a Login Page w/Firebase Auth","completed":true},{"content":"Complete a Home Page","completed":true},{"content":"Add/Update/Remove Board Info","completed":false},{"content":"Allow for users to create seperate sections in each board, as opposed to each board always have the same sections (related to College Work/Deadlines)","completed":false}],
+    "todo":[{"content":"Complete a Login Page w/Firebase Auth","completed":true},{"content":"Complete a Home Page","completed":true},{"content":"Add/Update/Remove Board Info","completed":false},{"content":"Allow for users to create seperate sections in each board, as opposed to each board always have the same sections","completed":false}],
     "source":"p",
     "dropdownOpen": false,
     "viewlink":null
