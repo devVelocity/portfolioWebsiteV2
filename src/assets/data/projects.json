@@ -37,6 +37,17 @@
     "source":"p",
     "dropdownOpen": false,
     "viewlink":null
+    },
+    {
+    "title":"PokeAPI",
+    "scenario":"I was tasked with buidting a front-end webpage based on the PokeAPI",
+    "elementsused":[{"logo":"vue.png","name":"VueJS"},{"logo":"Tailwind_CSS_Logo.png","name":"TailwindCSS"}],
+    "challenges":"",
+    "noteablefeatures":"",
+    "currentProject":false,
+    "source":"https://github.com/devVelocity/AccessTask",
+    "dropdownOpen": false,
+    "viewlink":"https://accesstaskb.netlify.app/"
     }
 ]
 

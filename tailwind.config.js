@@ -21,7 +21,9 @@ module.exports = {
         "footertwo":"#13151C",
         "footerline":"#454C59",
         "footerurl":"#546EA5",
-        "footerurlhover":"#7296e0"
+        "footerurlhover":"#7296e0",
+        "mobileMenuBG":"#21242b",
+        "mobileMenuDivider":"#17191f",
       }
     },
   },
