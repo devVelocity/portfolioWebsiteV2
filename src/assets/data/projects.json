@@ -41,6 +41,7 @@
     {
     "title":"PokeAPI",
     "scenario":"I was tasked with buidting a front-end webpage based on the PokeAPI",
+    "images":[],
     "elementsused":[{"logo":"vue.png","name":"VueJS"},{"logo":"Tailwind_CSS_Logo.png","name":"TailwindCSS"}],
     "challenges":"",
     "noteablefeatures":"",
