@@ -28,12 +28,12 @@
     {
     "title":"Todo List / Kanban Board",
     "images":[],
-    "scenario":"",
+    "scenario":"Building a todo-board website, with the ability for users to create, edit and delete their own boards. The main purpose for building this to-do board is to make a website similar to Trello for managing College Work and College Deadlines",
     "elementsused":[],
     "challenges":"",
     "noteablefeatures":[],
     "currentProject": true,
-    "todo":[{"content":"Complete a Login Page w/Firebase Auth","completed":true},{"content":"Complete a Home Page","completed":true},{"content":"Add/Update/Remove Board Info","completed":false}],
+    "todo":[{"content":"Complete a Login Page w/Firebase Auth","completed":true},{"content":"Complete a Home Page","completed":true},{"content":"Add/Update/Remove Board Info","completed":false},{"content":"Allow for users to create seperate sections in each board, as opposed to each board always have the same sections (related to College Work/Deadlines)","completed":false}],
     "source":"p",
     "dropdownOpen": false,
     "viewlink":null
