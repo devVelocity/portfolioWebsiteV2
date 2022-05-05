@@ -226,7 +226,7 @@
 
             </div>
             <div class="pb-8 flex mt-8 gap-4">
-              <a class="group w-[48%] border-skillsoutline rounded-md border-[1px] hover:border-white duration-100 hover:cursor-pointer flex items-center justify-center gap-4 p-3">
+              <a href="https://github.com/devVelocity" class="group w-[48%] border-skillsoutline rounded-md border-[1px] hover:border-white duration-100 hover:cursor-pointer flex items-center justify-center gap-4 p-3">
                 <img class="opacity-30 group-hover:opacity-100 duration-100" src="@/assets/images/GitHub-Mark-Light-32px.png">
                 <h2 class="text-white text-opacity-30 text-xl group-hover:text-opacity-100 duration-100">GitHub</h2>
               </a>
