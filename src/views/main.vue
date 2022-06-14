@@ -59,7 +59,7 @@
         <div class="pl-2 sm:pl-4">
            <h1 class="text-white text-4xl font-medium text-left">My Skills</h1>
            <div class="mt-8 flex flex-col md:flex-row gap-4 md:flex-wrap">
-             <div v-for="item in this.skillsJson" class='md:w-[48%] border-[2px] shover:border-solid border-opacity-20 p-4 rounded-xl pl-4 pr-12 flex items-center justify-start gap-4 relative after:content-[""] after:left-[-2.1px] after:w-[calc(100%_+_4px)] after:h-[calc(100%_+_4px)] after:absolute after:border-[2px] after:rounded-xl after:border-skillsoutline after:duration-75 hover:after:border-0' :style="{'border-color': item.colour}" @mouseover="item.hover = true">
+             <div v-for="item in this.skillsJson" class='md:w-[48%] border-[2px] border-skillsoutline hover:border-white duration-200 hover:border-opacity-70 p-4 rounded-xl pl-4 pr-12 flex items-center justify-start gap-4 relative'>
                <img v-if="item.logo" :src="require(`@/assets/images/`+item.logo)" :href="item.skill" class="w-12 h-12">
                <span v-if="!item.logo" class="h-12 w-0"></span>
                <h1 class="font-normal text-skillstext text-2xl">{{item.skill}}</h1>
@@ -190,7 +190,14 @@
                      </div>
                      <div v-if="item.noteablefeatures.length != 0" class="mt-12">
                        <h1 class="text-white text-3xl text-left font-normal">Noteable Features</h1>
-                       <h2 v-for="features in item.noteablefeatures" class="text-left text-white mt-6 font-light"><span class="mr-4">➔</span>{{features}}</h2>
+                       <div v-for="features in item.noteablefeatures" class="flex gap-4 mt-8">
+                          <div>
+                            <h1 class="text-white">➔</h1>
+                          </div>
+                          <div>
+                            <h1 class="text-left text-white">{{features}}</h1>
+                          </div>
+                       </div>
                      </div>
                    </div>
                  </div>
