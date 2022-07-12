@@ -34,7 +34,7 @@
               <div class="pl-2 sm:pl-4">
                 <h1 class="text-white text-4xl font-medium text-left">About Me</h1>
                 <h2 class="text-white text-xl mt-8 font-light text-left md:mb-4 mb-4">
-                  Hello! I am a 17 year old student from the Greater Manchester area, studying Information Technology Extended Diploma at College. I have a passion in Programming, Software Development and Frontend Development, and I enjoy constantly improving existing skills and learning new ones.
+                  Hello! I am a 18 year old from the Greater Manchester area, soon going into University to study a BSc in Computing. I have a passion for Software Development and Frontend Development. I enjoy developing my existing skills and learning new ones.
                 </h2>
               </div>
           </div>

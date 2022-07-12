@@ -28,7 +28,7 @@
                     </div>
                 </div>
                 <span class="block w-full h-[1px] bg-footerline rounded-md mt-12"></span>
-                <h1 class="text-left text-white font-light mt-8">© Kieran P - 2022</h1>
+                <h1 class="text-left text-white font-light mt-8">© Velocity 2022</h1>
                 <h1 class="text-left text-white font-light mt-1 text-opacity-50">Have a good {{dayToday}}!</h1>
             </div>
         </div>

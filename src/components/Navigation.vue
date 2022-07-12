@@ -42,7 +42,7 @@
           <path d="M44.6967 22.0629C41.0109 22.0629 32.736 25.1984 30.7841 28.8115C28.8322 32.4246 27.0983 39.4017 27.0983 42.8279" stroke="#237DCF" stroke-width="7"/>
           <path d="M44.4371 22.0629C41.0109 22.0629 33.529 16.5601 31.3552 13.082C29.1813 9.60385 28.6557 3.47817 28.6557 0.0519372" stroke="#237DCF" stroke-width="7"/>
         </svg>
-        <h1 class=" text-white text-2xl left-8 absolute w-32 block opacity-0 sm:opacity-100 font-medium">Kieran P</h1>
+        <h1 class=" text-white text-2xl left-8 absolute w-32 block opacity-0 sm:opacity-100 font-medium">Velocity</h1>
       </div>
     </div>
     <div @click="menuOpen = !menuOpen" class="flex lg:hidden w-[40px] h-[50px] flex-col items-center justify-evenly opacity-30 hover:opacity-100 duration-100 hover:cursor-pointer">
