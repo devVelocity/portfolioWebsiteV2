@@ -1,4 +1,5 @@
 <template>
+  <imgwindow :open="imgdisplayopen" :imgsrc="imgsrc" :imgalt="imgalt" @windowClose='this.imgdisplayopen = false'></imgwindow>
   <div class="home">
     <div ref="top" id="banner" class="min-h-[30rem] xl:pl-[12%] xl:pr-[12%] pl-4 pr-4 w-full bg-bannercol relative flex justify-between gap-8">
       <div id="info-container" class="relative mt-8 md:ml-8 ml-0 mb-16 mr-8">
@@ -33,7 +34,7 @@
               <div class="pl-2 sm:pl-4">
                 <h1 class="text-white text-4xl font-medium text-left">About Me</h1>
                 <h2 class="text-white text-xl mt-8 font-light text-left md:mb-4 mb-4">
-                  Hello! I am a 17 year old student from the Greater Manchester area, studying Information Technology Extended Diploma at College. I have a passion in Programming, Software Development and Frontend Development, and I enjoy constantly improving existing skills and learning new ones.
+                  Hello! I am a 18 year old from the Greater Manchester area, soon going into University to study a BSc in Computing. I have a passion for Software Development and Frontend Development. I enjoy developing my existing skills and learning new ones.
                 </h2>
               </div>
           </div>
@@ -104,7 +105,7 @@
                  <div class="flex p-8 gap-12 md:flex-row flex-col">
                    <div class="w-full">
                      <div class="image rounded-xl mb-6 mt-2 relative group" v-if="item.images.length != 0">
-                       <div class="absolute w-full h-full bg-black rounded-lg bg-opacity-0 group-hover:bg-opacity-80 duration-100 flex items-center justify-center gap-4 hover:cursor-pointer">
+                       <div @click="openIMGWindow(item.images)" class="absolute w-full h-full bg-black rounded-lg bg-opacity-0 group-hover:bg-opacity-80 duration-100 flex items-center justify-center gap-4 hover:cursor-pointer">
                          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 opacity-0 group-hover:opacity-100 stroke-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                           <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                           <path strokeLinecap="round" strokeLinejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
@@ -257,13 +258,21 @@ import skills from '@/assets/data/skills.json'
 import otherskills from '@/assets/data/otherskills.json'
 import projectsJSON from '@/assets/data/projects.json'
 
+import imgwindow from '@/components/imgwindow.vue'
+
 export default{
+  components:{
+    imgwindow
+  },
   data(){
     return{
       skillsJson: null,
       otherSkillsJSON: null,
       projectsImported: null,
       filterCriteria: null,
+      imgdisplayopen: false,
+      imgsrc: null,
+      imgalt: null,
     }
   },
   mounted(){
@@ -281,6 +290,12 @@ export default{
     this.otherSkillsJSON = otherskills
     this.projectsImported = projectsJSON
 
+  },
+  methods:{
+    openIMGWindow(images){
+      this.imgdisplayopen = true
+      this.imgsrc = images
+    }
   }
 }
 
