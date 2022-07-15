@@ -218,8 +218,8 @@
         <div class="pl-2 sm:pl-4">
            <h1 class="text-white text-4xl font-medium text-left">My Blog</h1>
            <div class="w-full h-auto mt-12">
-             <iframe src="https://projectworkblogp.blogspot.com/" class="w-full h-[600px]"></iframe>
-              <a href="https://projectworkblogp.blogspot.com/" class="left-4 text-white font-normal p-2 pl-4 pr-4 rounded-lg hover:bg-blue-800 duration-100 bg-blue-600 block w-fit mt-8">Open Blog Page</a>
+             <iframe src="https://vlctyblog.blogspot.com/" class="w-full h-[600px]"></iframe>
+              <a href="https://vlctyblog.blogspot.com/" class="left-4 text-white font-normal p-2 pl-4 pr-4 rounded-lg hover:bg-blue-800 duration-100 bg-blue-600 block w-fit mt-8">Open Blog Page</a>
            </div>
         </div>
         <h3 class="before:content-['<'] after:content-['>'] text-lg text-left text-opacity-40 text-lighteraboutme mt-8">/portfolio</h3>

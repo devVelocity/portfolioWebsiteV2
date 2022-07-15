@@ -19,7 +19,7 @@
     "achievements":"One of my main achievements with this project is being able to create a full project with VueJavaScript. This allowed me to use my learned knowledge of VueJavaScript and apply it to a scenario in order to improve my skills and learn new pieces of knowledge. I also think a great achievement was how I was able to get the menu system working. The Vue Router had an ID tag than could be changed for a certain link, this therefore allowed me to assign each ID tag to a menu item that can be fetched from the JavaScriptON. This therefore allowed me to have one single page that can be used to show all of the menu items through the use of loading the data about the item from the JavaScriptON file and binding the data to elements in the HTML using Vue. This also allows me to add new menu items easily by just adding new data to the JavaScriptON File, rather than having to add new HTML Elements and Pages",
     "challenges":"",
     "noteablefeatures":[],
-    "elementsused":[{"logo":"vue.png","name":"VueJS"},{"logo":"CSS3_logo_and_wordmark.svg.png","name":"CSS"},{"logo":"2048px-Unofficial_JavaScript_logo_2.svg.png","name":"JavaScript"},{"logo":"","name":"GSAP"}],
+    "elementsused":[{"logo":"vue.png","name":"DVueJS"},{"logo":"CSS3_logo_and_wordmark.svg.png","name":"CSS"},{"logo":"2048px-Unofficial_JavaScript_logo_2.svg.png","name":"JavaScript"},{"logo":"","name":"GSAP"}],
     "currentProject":false,
     "dropdownOpen": false,
     "source":"p",
