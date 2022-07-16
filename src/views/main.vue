@@ -209,6 +209,9 @@
              <h1>Criteria being filtered</h1>
            </div>
         </div>
+        <div class="pl-2 sm:pl-4 mt-16" v-if="this.creationsIMPJSON.length != 0">
+          <h1 class="text-white text-4xl font-medium text-left">Other Creations</h1>
+        </div>
         <h3 class="before:content-['<'] after:content-['>'] text-lg text-left text-opacity-40 text-lighteraboutme mt-8">/portfolio</h3>
       </div>
     </div>
@@ -257,6 +260,7 @@ import KUTE from 'kute.js'
 import skills from '@/assets/data/skills.json'
 import otherskills from '@/assets/data/otherskills.json'
 import projectsJSON from '@/assets/data/projects.json'
+import creationsJSON from '@/assets/data/othercreations.json'
 
 import imgwindow from '@/components/imgwindow.vue'
 
@@ -268,6 +272,7 @@ export default{
     return{
       skillsJson: null,
       otherSkillsJSON: null,
+      creationsIMPJSON: [],
       projectsImported: null,
       filterCriteria: null,
       imgdisplayopen: false,
@@ -289,6 +294,7 @@ export default{
     this.skillsJson = skills
     this.otherSkillsJSON = otherskills
     this.projectsImported = projectsJSON
+    this.creationsIMPJSON = creationsJSON
 
   },
   methods:{
